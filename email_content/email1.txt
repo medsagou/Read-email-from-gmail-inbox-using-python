@@ -1,0 +1,5 @@
+Hello,
+
+This is a test email sent from Me to test SMTP.
+
+Mohamed Sagou,
