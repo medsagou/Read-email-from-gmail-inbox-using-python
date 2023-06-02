@@ -42,6 +42,10 @@ def multi_sender(email_content="email1.txt",
                 gmail.login(user, app_pass)
                 gmail.sendmail(user, email[2], message)
             print("Email sent successfully!")
+
+            with open(content_dir + '/' + done, 'r') as F:
+                F.writelines(email[2])
+            
             gmail.quit()
         except Exception as error:
             print(f"Error email not send ----> {str(error)}")
