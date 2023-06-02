@@ -143,6 +143,11 @@ venv.bak/
 .dmypy.json
 dmypy.json
 
+email_content/*
+email_content/
+email_content/done.txt
+email_content/email1.txt
+email_content/rec-email.txt
 # Pyre type checker
 .pyre/
 
