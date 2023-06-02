@@ -31,7 +31,7 @@ def multi_sender(email_content="email1.txt",
         email = email.split(',')
         with open(content_dir + '/' + email_content, 'r') as F:
             body = F.read()
-        if email[3] in dones:
+        if email[2] in dones:
             continue
         body = body.replace('[R-N]',email[1])
         print(email[2])
@@ -43,9 +43,9 @@ def multi_sender(email_content="email1.txt",
                 gmail.sendmail(user, email[2], message)
             print("Email sent successfully!")
 
-            with open(content_dir + '/' + done, 'r') as F:
+            with open(content_dir + '/' + done, 'a') as F:
                 F.writelines(email[2])
-            
+                F.writelines('\n')
             gmail.quit()
         except Exception as error:
             print(f"Error email not send ----> {str(error)}")
