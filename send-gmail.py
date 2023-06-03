@@ -40,7 +40,7 @@ def multi_sender(email_content="email1.txt",
             with smtplib.SMTP(host, port) as gmail:
                 gmail.starttls()
                 gmail.login(user, app_pass)
-                gmail.sendmail(user, email[2], message)
+                gmail.sendmail(user, email[2].replace(' ',''), message)
             print("Email sent successfully!")
 
             with open(content_dir + '/' + done, 'a') as F:
